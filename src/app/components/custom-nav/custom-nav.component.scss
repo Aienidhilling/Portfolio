@@ -1,0 +1,88 @@
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+mat-sidenav {
+  width:100%;
+  background-color:transparent ;
+}
+
+mat-nav-list.visible-nav{
+  animation-name: fade-nav;
+  animation-duration: 1s ;
+
+}
+
+mat-sidenav-container {
+  height:64px;
+  width: 100%;
+  background-color: transparent;
+}
+
+button.active-button mat-icon {
+  transform: rotate(180deg);
+}
+
+button mat-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-button-container button mat-icon{
+  font-size: 40px;
+  width: fit-content;
+  height: fit-content;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+
+}
+
+div {
+  width: fit-content;
+}
+
+.options-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.options-container button,.options-container mat-icon {
+  font-size: 25px;
+  width:fit-content ;
+  height: fit-content;
+}
+
+@keyframes fade-nav {
+  0%{opacity:0;}
+  100%{opacity:100%;}
+}
+
+
+mat-nav-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+a {
+  width: fit-content;
+  margin-right: 5px;
+}
+
+mat-nav-list span{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
