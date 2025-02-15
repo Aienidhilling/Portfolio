@@ -1,5 +1,81 @@
-mat-toolbar {
-  background: blue; /* TODO: change color */
-  color: white; /* TODO: change color */
+:host{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+
+mat-sidenav {
+  width:100%;
+  background-color:transparent ;
+}
+
+mat-sidenav-container {
+  height:64px;
+  width: 100%;
+  background-color:transparent;
+}
+
+
+
+button.active-button:hover {
+  color: red;
+}
+
+button.active-button mat-icon {
+  transform: rotate(180deg);
+}
+
+
+app-custom-nav.visible-nav{
+  animation-name: fade-nav;
+  animation-duration: 1s ;
+
+}
+
+button mat-icon {
+  transition: transform 0.3s ease;
+}
+
+.nav-button-container button mat-icon{
+  font-size: 40px;
+  width: fit-content;
+  height: fit-content;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+
+}
+
+div {
+  width: fit-content;
+}
+
+span{
+  color: #314049;
+
+}
+
+.options-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.options-container button,.options-container mat-icon {
+  font-size: 25px;
+  width:fit-content ;
+  height: fit-content;
+}
+
+
+
+@keyframes fade-nav {
+  0%{opacity:0;}
+  100%{opacity:100%;}
 }

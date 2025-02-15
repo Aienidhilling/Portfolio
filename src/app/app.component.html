@@ -1,14 +1,19 @@
-<mat-toolbar>
-  Responsive sidebar navigation <!-- TODO:change -->
-</mat-toolbar>
-
+<div class="nav-button-container">
+  <button mat-icon-button (click)="sidenav.toggle();isClosed = !sidenav.opened" [ngClass]="{'active-button': !isClosed}" >
+    <mat-icon>{{ isClosed ? 'menu' : 'close' }}</mat-icon>
+  </button>
+</div>
 <mat-sidenav-container>
-  <mat-sidenav>
-
+  <mat-sidenav #sidenav mode="side" >
+    <app-custom-nav [ngClass]="{'visible-nav': !isClosed}" ></app-custom-nav>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <div class="content">
-      Main <!-- TODO:change -->
-    </div>
-  </mat-sidenav-content>
 </mat-sidenav-container>
+<div class="options-container">
+  <button mat-button>
+    <span>FR</span>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>invert_colors</mat-icon>
+  </button>
+</div>
+<router-outlet></router-outlet>

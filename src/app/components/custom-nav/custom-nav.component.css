@@ -1,0 +1,19 @@
+mat-nav-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+a {
+  width: fit-content;
+  margin-right: 5px;
+}
+
+span{
+  text-align: center;
+  font-size: 1.5em;
+  color: #314049;
+}
+
+
