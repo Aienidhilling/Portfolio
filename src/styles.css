@@ -1,9 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-/* colors https://coolors.co/314049-549f93-ececec*/
-html, body {
-  height: calc(100vh - 50px);
-  background: #ECECEC;
-  padding: 25px 25px 0 25px ;
-  user-select: none;
-}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

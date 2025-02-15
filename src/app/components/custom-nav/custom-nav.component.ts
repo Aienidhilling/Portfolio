@@ -12,7 +12,7 @@ export type MenuItem = {
   selector: 'app-custom-nav',
   imports: [CommonModule, MatListModule],
   templateUrl: './custom-nav.component.html',
-  styleUrl: './custom-nav.component.css'
+  styleUrl: './custom-nav.component.scss'
 })
 export class CustomNavComponent {
   menuItems = signal<MenuItem[]>([

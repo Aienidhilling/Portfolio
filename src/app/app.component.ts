@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {CustomNavComponent} from './components/custom-nav/custom-nav.component';
 import {NgClass} from '@angular/common';
-
+import {ThemeService} from './services/theme.service';
 
 
 @Component({
@@ -22,10 +22,17 @@ import {NgClass} from '@angular/common';
     NgClass
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  constructor(private themeService: ThemeService) {
+  }
+
   title = 'Portfolio';
   isClosed=true ;
+
+  toggleTheme(){
+    this.themeService.toggleTheme();
+  }
 
 }
