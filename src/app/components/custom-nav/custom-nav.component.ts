@@ -5,6 +5,7 @@ import {MatButton, MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
 import {ThemeService} from '../../services/theme.service';
+import {ToolsService} from '../../services/tools.service';
 
 
 export type MenuItem = {
@@ -29,7 +30,7 @@ export type MenuItem = {
 })
 export class CustomNavComponent {
 
-  constructor(private themeService: ThemeService) {
+  constructor(private themeService: ThemeService,private toolsService:ToolsService) {
   }
 
   isClosed=true ;
@@ -62,12 +63,6 @@ export class CustomNavComponent {
   }
 
   scrollTo(route: string) {
-    const navbarHeight = document.querySelector('app-custom-nav')?.clientHeight || 0; // Récupère la hauteur de la navbar
-    const targetElement = document.getElementById(route);
-
-    if (targetElement){
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-    }
+    this.toolsService.scrollTo(route);
   }
 }

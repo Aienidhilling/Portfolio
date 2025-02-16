@@ -5,7 +5,6 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {CustomNavComponent} from './components/custom-nav/custom-nav.component';
-import {NgClass} from '@angular/common';
 import {HomeComponent} from './components/home/home.component';
 import {SkillsComponent} from './components/skills/skills.component';
 import {ProjectsComponent} from './components/projects/projects.component';

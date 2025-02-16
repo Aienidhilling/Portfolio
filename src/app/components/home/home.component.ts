@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import { AnimatedArrowsButtonComponent } from '../animated-arrow/animated-arrow.component';
+import {ToolsService} from '../../services/tools.service';
 
 
 @Component({
@@ -9,15 +10,12 @@ import { AnimatedArrowsButtonComponent } from '../animated-arrow/animated-arrow.
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  //TODO: find a way to not duplicate this function
-  scrollTo(route: string) {
-    const navbarHeight = document.querySelector('app-custom-nav')?.clientHeight || 0;
-    const targetElement = document.getElementById(route);
 
-    if (targetElement){
-      const targetPosition = targetElement.offsetTop - navbarHeight;
-      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
-    }
+  constructor(private toolsService:ToolsService) {
+  }
+
+  scrollTo(route: string) {
+    this.toolsService.scrollTo(route);
   }
 
   @HostListener('window:scroll',[])
