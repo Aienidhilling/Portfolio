@@ -10,6 +10,14 @@
           <context context-type="linenumber">17,19</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="lang" datatype="html">
+        <source>en-US</source>
+        <target>fr</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/custom-nav/custom-nav.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="home" datatype="html">
         <source>Home</source>
         <target>Accueil</target>

@@ -13,7 +13,7 @@
   </mat-sidenav>
 </mat-sidenav-container>
 <div class="options-container">
-  <button mat-button>
+  <button mat-button (click)="changeLanguage()">
     <span i18n="@@language">FR</span>
   </button>
   <button mat-icon-button (click)="toggleTheme()">

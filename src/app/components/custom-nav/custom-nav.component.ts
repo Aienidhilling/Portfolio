@@ -6,6 +6,7 @@ import {MatIcon} from '@angular/material/icon';
 import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
 import {ThemeService} from '../../services/theme.service';
 import {ToolsService} from '../../services/tools.service';
+import {Router} from '@angular/router';
 
 
 export type MenuItem = {
@@ -30,10 +31,12 @@ export type MenuItem = {
 })
 export class CustomNavComponent {
 
-  constructor(private themeService: ThemeService,private toolsService:ToolsService,private el: ElementRef) {
+  constructor(private themeService: ThemeService,private toolsService:ToolsService,private el: ElementRef, private router:Router) {
   }
 
   isClosed=true ;
+
+  currentLang = $localize`:@@lang:en-US`;
 
   menuItems = signal<MenuItem[]>([
     {
@@ -74,5 +77,10 @@ export class CustomNavComponent {
 
   scrollTo(route: string) {
     this.toolsService.scrollTo(route);
+  }
+
+  changeLanguage() {
+    this.currentLang= this.currentLang === 'fr' ? 'en-US' : 'fr';
+    this.router.navigate([`/${this.currentLang}`]).then(r => null);
   }
 }
