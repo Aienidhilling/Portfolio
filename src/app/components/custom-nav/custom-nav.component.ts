@@ -81,6 +81,6 @@ export class CustomNavComponent {
 
   changeLanguage() {
     this.currentLang= this.currentLang === 'fr' ? 'en-US' : 'fr';
-    this.router.navigate([`/${this.currentLang}`]).then(r => null);
+    window.location.href = 'Portfolio/' + `${this.currentLang}`;
   }
 }
