@@ -1,0 +1,38 @@
+:host{
+  align-content: center;
+  text-align: center;
+  padding-bottom: 104px ;
+}
+
+h3{
+  text-transform: uppercase;
+  color: var(--mat-sys-on-background);
+  font-weight: 800;
+  font-size:3em ;
+  margin: 0;
+  letter-spacing: 0.1em ;
+}
+
+.info{
+  color: var(--mat-sys-secondary)
+}
+
+.arrow-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom:8rem;
+}
+
+animated-arrows{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+}
+
+.animated-arrow {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
