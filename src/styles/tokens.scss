@@ -1,7 +1,7 @@
 /* These tokens are generated using https://themes.angular-material.dev/ */
-/* Preview: https://themes.angular-material.dev/?background=%23FAFAFA&on-background=%23314049&on-primary=%23FAFAFA&on-secondary=%23FAFAFA&primary=%2351606a&secondary=%23549F93&seed-error=%23ba1a1a&seed-neutral=%23777777&seed-neutral-variant=%2374787b&seed-primary=%23314049&seed-secondary=%23386B65&seed-tertiary=%23675a6a */
+/* Preview: https://themes.angular-material.dev/?background=%23EBEBEB&on-background=%23314049&on-primary=%23EBEBEB&on-secondary=%23EBEBEB&primary=%2351606a&secondary=%23549F93&seed-error=%23ba1a1a&seed-neutral=%23777777&seed-neutral-variant=%2374787b&seed-primary=%23314049&seed-secondary=%23386B65&seed-tertiary=%23675a6a */
 /* Seed Colors: primary: #314049, secondary: #386B65, tertiary: #675a6a, error: #ba1a1a, neutral: #777777, neutral-variant: #74787b */
-/* Modified System Colors: on-primary: #FAFAFA, secondary: #549F93, on-secondary: #FAFAFA, background: #FAFAFA, on-background: #314049, primary: #51606a */
+/* Modified System Colors: on-primary: #EBEBEB, secondary: #549F93, on-secondary: #EBEBEB, background: #EBEBEB, on-background: #314049, primary: #51606a */
 
 @use "@angular/material" as mat;
 
@@ -10,7 +10,7 @@
 :root, :host {
   @include mat.theme-overrides((
     primary: #314049,
-    on-primary: #FAFAFA,
+    on-primary: #EBEBEB,
     primary-container: #d5e5f0,
     on-primary-container: #0e1d26,
     inverse-primary: #b9c9d4,
@@ -19,7 +19,7 @@
     on-primary-fixed: #0e1d26,
     on-primary-fixed-variant: #3a4952,
     secondary: #386B65,
-    on-secondary: #FAFAFA,
+    on-secondary: #EBEBEB,
     secondary-container: #b8ede5,
     on-secondary-container: #00201d,
     secondary-fixed: #b8ede5,
@@ -34,7 +34,7 @@
     tertiary-fixed-dim: #d2c1d4,
     on-tertiary-fixed: #221825,
     on-tertiary-fixed-variant: #4f4352,
-    background: #FAFAFA,
+    background: #EBEBEB,
     on-background: #314049,
     surface: #fcf8f8,
     surface-dim: #ddd9d8,
@@ -80,7 +80,7 @@
     on-primary-fixed: #0e1d26,
     on-primary-fixed-variant: #3a4952,
     secondary: #79B9AE,
-    on-secondary: #FAFAFA,
+    on-secondary: #EBEBEB,
     secondary-container: #194f49,
     on-secondary-container: #b8ede5,
     secondary-fixed: #b8ede5,
