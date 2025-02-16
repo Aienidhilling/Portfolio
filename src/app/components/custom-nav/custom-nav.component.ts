@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, ElementRef, signal} from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {CommonModule, NgClass} from '@angular/common';
 import {MatButton, MatIconButton} from '@angular/material/button';
@@ -30,7 +30,7 @@ export type MenuItem = {
 })
 export class CustomNavComponent {
 
-  constructor(private themeService: ThemeService,private toolsService:ToolsService) {
+  constructor(private themeService: ThemeService,private toolsService:ToolsService,private el: ElementRef) {
   }
 
   isClosed=true ;
@@ -57,6 +57,16 @@ export class CustomNavComponent {
       route:'contact',
     }
   ]);
+
+  toggleNavBar() {
+    const host = this.el.nativeElement;
+
+    if (!this.isClosed) {
+      host.style.backdropFilter = 'blur(15px)';
+    } else {
+      host.style.backdropFilter = 'none';
+    }
+  }
 
   toggleTheme(){
     this.themeService.toggleTheme();
