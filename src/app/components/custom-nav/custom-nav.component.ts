@@ -37,23 +37,23 @@ export class CustomNavComponent {
 
   menuItems = signal<MenuItem[]>([
     {
-      label:'Home',
+      label: $localize`:@@home:Home`,
       route:'home',
     },
     {
-      label:'Skills',
+      label:$localize`:@@skills:Skills`,
       route:'skills',
     },
     {
-      label:'Projects',
+      label:$localize`:@@projects:Projects`,
       route:'projects',
     },
     {
-      label:'Experiences',
+      label:$localize`:@@experiences:Experiences`,
       route:'experiences',
     },
     {
-      label:'Contact',
+      label:$localize`:@@contact:Contact`,
       route:'contact',
     }
   ]);
