@@ -13,10 +13,9 @@
   </mat-sidenav>
 </mat-sidenav-container>
 <div class="options-container">
-  <button mat-button (click)="changeLanguage()">
+  <a mat-button href="/{{currentLang}}/">
     <span i18n="@@language">FR</span>
-    <span>{{currentLang}}</span>
-  </button>
+  </a>
   <button mat-icon-button (click)="toggleTheme()">
     <mat-icon>invert_colors</mat-icon>
   </button>

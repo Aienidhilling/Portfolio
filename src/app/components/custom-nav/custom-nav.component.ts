@@ -1,7 +1,7 @@
 import {Component, ElementRef, signal} from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {CommonModule, NgClass} from '@angular/common';
-import {MatButton, MatIconButton} from '@angular/material/button';
+import {MatAnchor, MatButton, MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
 import {ThemeService} from '../../services/theme.service';
@@ -25,18 +25,18 @@ export type MenuItem = {
     MatSidenav,
     MatSidenavContainer,
     NgClass,
+    MatAnchor,
   ],
   templateUrl: './custom-nav.component.html',
   styleUrl: './custom-nav.component.scss'
 })
 export class CustomNavComponent {
 
-  constructor(private themeService: ThemeService,private toolsService:ToolsService,private el: ElementRef, private router:Router) {
+  constructor(private themeService: ThemeService,private toolsService:ToolsService,private el: ElementRef) {
   }
 
-  isClosed=true ;
-
   currentLang = $localize`:@@lang:en-US`;
+  isClosed=true ;
 
   menuItems = signal<MenuItem[]>([
     {
@@ -79,8 +79,6 @@ export class CustomNavComponent {
     this.toolsService.scrollTo(route);
   }
 
-  changeLanguage() {
-    this.currentLang= this.currentLang === 'fr' ? 'en-US' : 'fr';
-    window.location.href = 'Portfolio/' + `${this.currentLang}`;
-  }
+
+
 }
