@@ -1,12 +1,12 @@
 import {Component, ElementRef, signal} from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {CommonModule, NgClass} from '@angular/common';
-import {MatAnchor, MatButton, MatIconButton} from '@angular/material/button';
+import {MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
 import {ThemeService} from '../../services/theme.service';
 import {ToolsService} from '../../services/tools.service';
-import {Router} from '@angular/router';
+
 
 
 export type MenuItem = {
@@ -19,13 +19,11 @@ export type MenuItem = {
   imports: [
     CommonModule,
     MatListModule,
-    MatButton,
     MatIcon,
     MatIconButton,
     MatSidenav,
     MatSidenavContainer,
     NgClass,
-    MatAnchor,
   ],
   templateUrl: './custom-nav.component.html',
   styleUrl: './custom-nav.component.scss'
@@ -35,8 +33,9 @@ export class CustomNavComponent {
   constructor(private themeService: ThemeService,private toolsService:ToolsService,private el: ElementRef) {
   }
 
-  currentLang = $localize`:@@lang:en-US`;
   isClosed=true ;
+
+  currentLang = $localize`:@@lang:en-US`;
 
   menuItems = signal<MenuItem[]>([
     {
@@ -78,7 +77,5 @@ export class CustomNavComponent {
   scrollTo(route: string) {
     this.toolsService.scrollTo(route);
   }
-
-
 
 }
