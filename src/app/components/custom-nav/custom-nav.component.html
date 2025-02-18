@@ -13,7 +13,7 @@
   </mat-sidenav>
 </mat-sidenav-container>
 <div class="options-container">
-  <a href = "/{{currentLang}}">
+  <a mat-button id="switch-lang" href = "{{otherLang}}">
     <span i18n="@@language">FR</span>
   </a>
   <button mat-icon-button (click)="toggleTheme()">

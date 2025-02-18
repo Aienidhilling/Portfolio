@@ -1,7 +1,7 @@
 import {Component, ElementRef, signal} from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {CommonModule, NgClass} from '@angular/common';
-import {MatIconButton} from '@angular/material/button';
+import {MatAnchor, MatIconButton} from '@angular/material/button';
 import {MatIcon} from '@angular/material/icon';
 import {MatSidenav, MatSidenavContainer} from '@angular/material/sidenav';
 import {ThemeService} from '../../services/theme.service';
@@ -24,6 +24,7 @@ export type MenuItem = {
     MatSidenav,
     MatSidenavContainer,
     NgClass,
+    MatAnchor,
   ],
   templateUrl: './custom-nav.component.html',
   styleUrl: './custom-nav.component.scss'
@@ -35,7 +36,7 @@ export class CustomNavComponent {
 
   isClosed=true ;
 
-  currentLang = $localize`:@@lang:en-US`;
+  otherLang = $localize`:@@lang:en-US` == "en-US" ? "fr" : "en-US"  ;
 
   menuItems = signal<MenuItem[]>([
     {

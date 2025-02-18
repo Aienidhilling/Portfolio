@@ -38,7 +38,7 @@ button mat-icon {
   height: fit-content;
 }
 
-button{
+button,#switch-lang{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,6 +46,8 @@ button{
   height: fit-content;
 
 }
+
+
 
 div {
   width: fit-content;
@@ -58,7 +60,7 @@ div {
 
 }
 
-.options-container button,.options-container mat-icon {
+.options-container button,.options-container mat-icon,#switch-lang {
   font-size: 25px;
   width:fit-content ;
   height: fit-content;
