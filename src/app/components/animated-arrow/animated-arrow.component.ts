@@ -39,19 +39,22 @@ import {NgClass} from '@angular/common';
     }
 
     .arrow-button .arrow-one.down {
-      animation: arrow-movement-down 2s ease infinite;
+      animation: arrow-movement-down 1.5s ease infinite;
     }
 
 
     @keyframes arrow-movement-down {
       0% {
         top: 0;
+        opacity: 30%;
       }
       40% {
         top: 30px;
+        opacity: 100%;
       }
       100% {
         top: 0;
+        opacity: 30%;
       }
     }
 

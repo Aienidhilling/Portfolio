@@ -25,7 +25,7 @@ export class HomeComponent {
     const arrow = document.getElementById('arrow');
     if (arrow) {
       arrow.style.opacity = scrollPosition > 50 ? '0' : '1';
-      arrow.style.transition ='opacity 1s ease-out';
+      arrow.style.transition ='opacity 0.4s ease-out';
     }
   }
 
